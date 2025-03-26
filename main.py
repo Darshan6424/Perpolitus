@@ -7,6 +7,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from dotenv import load_dotenv
 from datetime import datetime
+from keep_alive import keep_alive
 
 # Load environment variables
 load_dotenv()
@@ -289,4 +290,5 @@ async def help_command(interaction: discord.Interaction):
 
 # Run the bot
 if __name__ == "__main__":
+    keep_alive()
     bot.run(TOKEN)
